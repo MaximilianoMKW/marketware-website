@@ -1,13 +1,33 @@
 .cta-section {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--color-navy-900), var(--color-navy-950));
+  background:
+    linear-gradient(90deg, rgba(65, 187, 202, 0.1) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(135deg, var(--color-navy-900), var(--color-navy-950));
+  background-size: 46px 46px, 46px 46px, auto;
   color: var(--color-white);
   padding: 34px;
   box-shadow: var(--shadow-card);
+}
+
+.cta-section::after {
+  position: absolute;
+  inset: auto -10% -55% 48%;
+  height: 220px;
+  content: '';
+  background: repeating-linear-gradient(112deg, transparent 0 18px, rgba(65, 187, 202, 0.22) 19px, transparent 20px);
+  transform: rotate(-3deg);
+}
+
+.cta-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-section h2 {

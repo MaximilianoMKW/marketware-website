@@ -8,11 +8,14 @@
   --color-teal: #41bbca;
   --color-green: #39c89a;
   --color-surface: #f6f8fb;
+  --color-surface-strong: #eef5f8;
+  --color-ink-soft: #172033;
   --color-border: #dbe3ed;
   --radius-lg: 18px;
   --radius-md: 12px;
   --radius-sm: 8px;
   --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.12);
   --shadow-card: 0 20px 55px rgba(6, 20, 38, 0.16);
+  --shadow-lifted: 0 24px 70px rgba(6, 20, 38, 0.18);
   --font-sans: 'Manrope', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }

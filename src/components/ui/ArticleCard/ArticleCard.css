@@ -1,17 +1,46 @@
 .article-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   background: var(--color-white);
   padding: 26px;
   box-shadow: var(--shadow-soft);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .article-card--featured {
   border-color: rgba(57, 200, 154, 0.42);
-  background: linear-gradient(135deg, #ffffff 0%, #f7fffb 100%);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(240, 255, 249, 0.9)),
+    var(--color-white);
+}
+
+.article-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  content: '';
+  background: linear-gradient(90deg, var(--color-teal), var(--color-green));
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.article-card:hover {
+  border-color: rgba(57, 200, 154, 0.5);
+  box-shadow: var(--shadow-lifted);
+  transform: translateY(-4px);
+}
+
+.article-card:hover::before,
+.article-card--featured::before {
+  opacity: 1;
 }
 
 .article-card__meta {

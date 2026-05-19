@@ -20,26 +20,44 @@
 }
 
 .about-panel {
+  position: relative;
+  overflow: hidden;
   display: flex;
   gap: 18px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #ffffff, #f8fbff);
-  padding: 28px;
-  box-shadow: var(--shadow-soft);
+  background:
+    linear-gradient(135deg, #ffffff, #f8fbff),
+    var(--color-white);
+  padding: 30px;
+  box-shadow: var(--shadow-card);
+}
+
+.about-panel::after {
+  position: absolute;
+  inset: auto -20px -34px auto;
+  width: 120px;
+  height: 120px;
+  content: '';
+  border: 1px solid rgba(65, 187, 202, 0.2);
+  border-radius: 24px;
+  transform: rotate(15deg);
 }
 
 .about-panel svg {
+  position: relative;
   flex: 0 0 auto;
   color: #54bd00;
 }
 
 .about-panel h2 {
+  position: relative;
   margin: 0 0 8px;
   font-size: 1.2rem;
 }
 
 .about-panel p {
+  position: relative;
   margin: 0;
   color: var(--color-muted);
 }

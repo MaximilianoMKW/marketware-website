@@ -1,21 +1,56 @@
 .service-details {
   display: grid;
   gap: 22px;
+  counter-reset: service;
 }
 
 .service-detail {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 28px;
   align-items: start;
-  border: 1px solid var(--color-border);
+  counter-increment: service;
+  border: 1px solid rgba(219, 227, 237, 0.95);
   border-radius: var(--radius-lg);
-  background: var(--color-white);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 252, 255, 0.94)),
+    var(--color-white);
   padding: 30px;
   box-shadow: var(--shadow-soft);
 }
 
+.service-detail::before {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  content: '0' counter(service);
+  color: rgba(65, 187, 202, 0.16);
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.service-detail:nth-child(even) {
+  background:
+    linear-gradient(145deg, rgba(6, 20, 38, 0.98), rgba(8, 27, 50, 0.96)),
+    var(--color-navy-900);
+  color: var(--color-white);
+}
+
+.service-detail:nth-child(even) p,
+.service-detail:nth-child(even) .service-detail__lists ul {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.service-detail:nth-child(even) .service-detail__lists > div {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.045);
+}
+
 .service-detail__intro {
+  position: relative;
   display: grid;
   gap: 14px;
 }
@@ -41,6 +76,7 @@
 }
 
 .service-detail__lists {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -49,6 +85,13 @@
 .service-detail__lists h3 {
   margin-bottom: 10px;
   font-size: 0.92rem;
+}
+
+.service-detail__lists > div {
+  border: 1px solid rgba(219, 227, 237, 0.9);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.68);
+  padding: 18px;
 }
 
 .service-detail__lists ul {

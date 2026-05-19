@@ -1,21 +1,31 @@
 .contact-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 390px;
   gap: 28px;
 }
 
 .contact-form,
 .contact-card {
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(219, 227, 237, 0.92);
   border-radius: var(--radius-lg);
-  background: var(--color-white);
-  box-shadow: var(--shadow-soft);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-card);
   padding: 30px;
 }
 
 .contact-form {
+  position: relative;
+  overflow: hidden;
   display: grid;
   gap: 18px;
+}
+
+.contact-form::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  content: '';
+  background: linear-gradient(90deg, var(--color-green), var(--color-teal));
 }
 
 .contact-form label {
@@ -40,6 +50,17 @@
   padding: 13px 14px;
   background: var(--color-white);
   color: var(--color-text);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(65, 187, 202, 0.78);
+  box-shadow: 0 0 0 4px rgba(65, 187, 202, 0.14);
 }
 
 .contact-form textarea {
@@ -81,6 +102,10 @@
 
 .contact-card {
   align-self: start;
+  background:
+    linear-gradient(160deg, rgba(6, 20, 38, 0.98), rgba(8, 27, 50, 0.96)),
+    var(--color-navy-900);
+  color: var(--color-white);
 }
 
 .contact-card h2 {
@@ -89,7 +114,7 @@
 
 .contact-card p {
   margin: 14px 0 26px;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-card a,
@@ -98,7 +123,7 @@
   align-items: center;
   gap: 10px;
   margin-top: 14px;
-  color: var(--color-navy-900);
+  color: rgba(255, 255, 255, 0.86);
   font-weight: 800;
 }
 
