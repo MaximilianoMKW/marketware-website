@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+  <title id="title">Dark observability network background</title>
+  <defs>
+    <radialGradient id="g1" cx="18%" cy="18%" r="60%">
+      <stop stop-color="#16466b"/>
+      <stop offset="0.58" stop-color="#081b32"/>
+      <stop offset="1" stop-color="#061426"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#41bbca" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#39c89a" stop-opacity=".25"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <g opacity=".22" stroke="url(#line)" stroke-width="1.4" fill="none">
+    <path d="M120 210C280 120 380 330 530 238S780 70 956 180s232 290 458 160"/>
+    <path d="M80 530c190-110 350 25 510-54s226-225 418-132 250 250 502 120"/>
+    <path d="M220 750c145-170 360-90 488-190s298-180 510-42"/>
+  </g>
+  <g fill="#41bbca" opacity=".52">
+    <circle cx="178" cy="180" r="4"/><circle cx="404" cy="305" r="5"/><circle cx="612" cy="208" r="4"/>
+    <circle cx="842" cy="118" r="5"/><circle cx="1052" cy="248" r="4"/><circle cx="1335" cy="318" r="5"/>
+    <circle cx="260" cy="600" r="4"/><circle cx="590" cy="475" r="5"/><circle cx="914" cy="340" r="4"/>
+    <circle cx="1222" cy="520" r="5"/><circle cx="720" cy="650" r="4"/><circle cx="1186" cy="624" r="4"/>
+  </g>
+  <g opacity=".07" stroke="#ffffff">
+    <path d="M0 90h1600M0 220h1600M0 350h1600M0 480h1600M0 610h1600M0 740h1600"/>
+    <path d="M180 0v900M360 0v900M540 0v900M720 0v900M900 0v900M1080 0v900M1260 0v900M1440 0v900"/>
+  </g>
+</svg>

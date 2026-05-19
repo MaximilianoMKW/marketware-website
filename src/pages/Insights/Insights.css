@@ -1,0 +1,21 @@
+.insights-featured {
+  margin-bottom: 28px;
+}
+
+.insights-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.insights-filter span {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-white);
+  color: var(--color-muted);
+  padding: 8px 12px;
+  font-size: 0.86rem;
+  font-weight: 800;
+}

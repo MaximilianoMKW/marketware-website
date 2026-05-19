@@ -1,0 +1,292 @@
+.logo-strip {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.logo-strip__track {
+  display: flex;
+  width: max-content;
+  animation: logo-carousel 16s linear infinite;
+  will-change: transform;
+}
+
+.logo-strip__group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 11px;
+  padding-right: 11px;
+}
+
+.logo-strip__item {
+  display: grid;
+  flex: 0 0 auto;
+  min-width: 108px;
+  min-height: 44px;
+  place-items: center;
+  border: 2px solid #b7bdc5;
+  border-radius: 5px;
+  background: var(--color-white);
+  color: #24364a;
+  box-shadow: none;
+  font-weight: 800;
+  text-align: center;
+  padding: 6px 12px;
+  font-size: 1.3rem;
+  line-height: 1;
+  overflow: hidden;
+  filter: grayscale(1);
+  transition:
+    filter 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.logo-strip__item:hover,
+.logo-strip__item:focus-within {
+  border-color: rgba(65, 187, 202, 0.52);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+  filter: grayscale(0);
+  transform: translateY(-1px);
+}
+
+.logo-strip__item img {
+  display: block;
+  width: auto;
+  max-width: 138px;
+  max-height: 30px;
+  object-fit: contain;
+}
+
+@keyframes logo-carousel {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.logo-strip__item--edp {
+  color: #4d5968;
+  font-size: 1.55rem;
+}
+
+.logo-strip__item--eredes,
+.logo-strip__item--ana {
+  color: #75bd00;
+  font-size: 1.02rem;
+}
+
+.logo-strip__item--santander {
+  color: #e5222b;
+  min-width: 144px;
+}
+
+.logo-strip__item--cgd {
+  color: #3f78b8;
+  min-width: 112px;
+}
+
+.logo-strip__item--fidelidade {
+  color: #ef4035;
+  min-width: 150px;
+  letter-spacing: 0.08em;
+}
+
+.logo-strip__item--ctt {
+  color: #4c3f3a;
+  min-width: 120px;
+}
+
+.logo-strip__item--ctt img {
+  max-width: 112px;
+  max-height: 26px;
+}
+
+.logo-strip__item--luz {
+  color: var(--color-teal);
+  min-width: 146px;
+  letter-spacing: 0.04em;
+}
+
+.logo-strip__item--ana {
+  min-width: 154px;
+  max-width: 154px;
+  font-size: 0.72rem;
+  line-height: 1.05;
+}
+
+.logo-strip__item--fidelidade img {
+  max-width: 152px;
+  max-height: 24px;
+}
+
+.logo-strip__item--ana img {
+  width: 126px;
+  max-width: 126px;
+  max-height: 32px;
+}
+
+.logo-strip__item--brisa img {
+  max-width: 128px;
+  max-height: 42px;
+}
+
+.logo-strip__item--ip {
+  min-width: 168px;
+}
+
+.logo-strip__item--ip img {
+  max-width: 148px;
+  max-height: 34px;
+}
+
+@media (min-width: 1500px) {
+  .logo-strip__track {
+    animation-duration: 18s;
+  }
+
+  .logo-strip__group {
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+  .logo-strip__item {
+    min-width: 142px;
+    min-height: 58px;
+    padding: 8px 18px;
+    font-size: 1.65rem;
+  }
+
+  .logo-strip__item img {
+    max-width: 180px;
+    max-height: 40px;
+  }
+
+  .logo-strip__item--edp {
+    font-size: 1.95rem;
+  }
+
+  .logo-strip__item--eredes {
+    font-size: 1.22rem;
+  }
+
+  .logo-strip__item--santander {
+    min-width: 186px;
+  }
+
+  .logo-strip__item--cgd {
+    min-width: 142px;
+  }
+
+  .logo-strip__item--fidelidade {
+    min-width: 198px;
+  }
+
+  .logo-strip__item--ctt {
+    min-width: 158px;
+  }
+
+  .logo-strip__item--ctt img {
+    max-width: 144px;
+    max-height: 34px;
+  }
+
+  .logo-strip__item--luz {
+    min-width: 192px;
+  }
+
+  .logo-strip__item--ana {
+    min-width: 192px;
+    max-width: 192px;
+    font-size: 0.88rem;
+  }
+
+  .logo-strip__item--ana img {
+    width: 164px;
+    max-width: 164px;
+    max-height: 40px;
+  }
+
+  .logo-strip__item--ip {
+    min-width: 220px;
+  }
+
+  .logo-strip__item--brisa {
+    min-width: 170px;
+  }
+
+  .logo-strip__item--brisa img {
+    max-width: 156px;
+    max-height: 50px;
+  }
+
+  .logo-strip__item--ip img {
+    max-width: 198px;
+    max-height: 46px;
+  }
+}
+
+@media (max-width: 760px) {
+  .logo-strip {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
+
+  .logo-strip__track {
+    display: flex;
+    width: max-content;
+    animation: logo-carousel 14s linear infinite;
+  }
+
+  .logo-strip__group {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding-right: 10px;
+  }
+
+  .logo-strip__item,
+  .logo-strip__item--santander,
+  .logo-strip__item--cgd,
+  .logo-strip__item--fidelidade,
+  .logo-strip__item--ctt,
+  .logo-strip__item--luz,
+  .logo-strip__item--ana,
+  .logo-strip__item--brisa,
+  .logo-strip__item--ip {
+    min-width: 126px;
+    max-width: 126px;
+    min-height: 42px;
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
+
+  .logo-strip__item--edp {
+    font-size: 1.22rem;
+  }
+
+  .logo-strip__item--ana {
+    min-width: 142px;
+    max-width: 142px;
+    font-size: 0.68rem;
+  }
+
+  .logo-strip__item--ana img {
+    width: 122px;
+    max-width: 122px;
+    max-height: 30px;
+  }
+
+  .logo-strip__item img {
+    max-width: 122px;
+    max-height: 28px;
+  }
+}

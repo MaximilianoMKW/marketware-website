@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" role="img" aria-labelledby="title">
+  <title id="title">Observability topology dashboard panel</title>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#020817"/>
+      <stop offset="1" stop-color="#030d20"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop stop-color="#ffffff" stop-opacity=".7"/>
+      <stop offset=".15" stop-color="#7f9dbd" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="470" rx="18" fill="url(#panel)"/>
+  <text x="18" y="36" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Smartscape®</text>
+  <text x="142" y="36" fill="#fff" font-family="Arial, sans-serif" font-size="18">Topology</text>
+  <text x="632" y="60" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="800">See your whole business</text>
+  <text x="632" y="88" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="800">with different eyes</text>
+  <g opacity=".26">
+    <circle cx="470" cy="156" r="94" fill="url(#burst)"/>
+    <circle cx="444" cy="315" r="76" fill="url(#burst)"/>
+    <circle cx="730" cy="190" r="58" fill="url(#burst)"/>
+  </g>
+  <g fill="none" stroke="#aeb8d8" stroke-width="1" opacity=".82">
+    <path d="M186 272L304 204L385 232L468 153L554 275L610 243"/>
+    <path d="M304 204L260 103M304 204L242 310M385 232L387 122M385 232L360 348"/>
+    <path d="M468 153L509 104M468 153L548 128M468 153L516 248"/>
+    <path d="M554 275L545 381M554 275L665 326M610 243L760 344"/>
+    <path d="M660 312L716 270L774 310L820 276M716 270L716 392M774 310L774 392M820 276L835 360"/>
+  </g>
+  <g>
+    <circle cx="304" cy="204" r="12" fill="#d93c54"/><circle cx="385" cy="232" r="10" fill="#6f6ca6"/>
+    <circle cx="468" cy="153" r="9" fill="#767aa4"/><circle cx="554" cy="275" r="10" fill="#767aa4"/>
+    <circle cx="186" cy="272" r="10" fill="#767aa4"/><circle cx="260" cy="103" r="10" fill="#767aa4"/>
+    <circle cx="242" cy="310" r="10" fill="#767aa4"/><circle cx="387" cy="122" r="10" fill="#767aa4"/>
+    <circle cx="360" cy="348" r="10" fill="#767aa4"/><circle cx="509" cy="104" r="10" fill="#767aa4"/>
+    <circle cx="548" cy="128" r="10" fill="#767aa4"/><circle cx="516" cy="248" r="10" fill="#767aa4"/>
+    <circle cx="545" cy="381" r="10" fill="#767aa4"/><circle cx="665" cy="326" r="10" fill="#d93c54"/>
+    <circle cx="610" cy="243" r="10" fill="#767aa4"/>
+    <circle cx="716" cy="270" r="8" fill="#d72b44"/><circle cx="774" cy="310" r="8" fill="#d72b44"/>
+    <circle cx="820" cy="276" r="8" fill="#d72b44"/><circle cx="716" cy="392" r="8" fill="#4257a4"/>
+    <circle cx="774" cy="392" r="8" fill="#4257a4"/><circle cx="835" cy="360" r="8" fill="#d72b44"/>
+  </g>
+  <g fill="#fff" opacity=".78" font-family="Arial, sans-serif" font-size="8">
+    <text x="266" y="187">payments-service</text><text x="352" y="217">api-gateway</text>
+    <text x="435" y="138">business app</text><text x="523" y="260">backend cluster</text>
+    <text x="145" y="292">image provider</text><text x="628" y="235">radio cache</text>
+  </g>
+  <g transform="translate(742 126)">
+    <rect width="128" height="104" rx="8" fill="#11152a" stroke="#272d4a"/>
+    <text x="12" y="22" fill="#fff" font-family="Arial, sans-serif" font-size="8" font-weight="700">Service dependency graph</text>
+    <rect x="12" y="36" width="36" height="6" rx="3" fill="#d93c54"/>
+    <rect x="60" y="36" width="48" height="6" rx="3" fill="#6f6ca6"/>
+    <rect x="12" y="56" width="92" height="4" rx="2" fill="#44506f"/>
+    <rect x="12" y="72" width="74" height="4" rx="2" fill="#44506f"/>
+    <rect x="12" y="88" width="100" height="4" rx="2" fill="#44506f"/>
+  </g>
+</svg>

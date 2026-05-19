@@ -1,0 +1,805 @@
+# Marketware Website Internal Pages Expansion - Agent Instructions
+
+## Context
+
+The Marketware homepage is already visually and strategically strong.  
+The next priority is to turn the internal pages into credible, polished pages that feel ready for enterprise prospects.
+
+The website positions Marketware as:
+
+- A premium Dynatrace specialist consultancy
+- Trusted in Portugal and Iberia
+- Ready for international growth
+- Strong in observability, digital experience, automation, and operational resilience
+- Experienced with enterprise sectors such as banking, energy, insurance, and critical digital services
+
+The current gaps are mainly in:
+
+- `/case-studies`
+- `/insights`
+- `/contact`
+- `/about`
+- `/services`
+- `/industries`
+
+The Agent should expand these pages while maintaining:
+
+- Clean React + Vite + TypeScript implementation
+- Reusable components
+- Data-driven content
+- Modern responsive layout
+- Strong enterprise visual polish
+- No invented exact metrics, public claims, testimonials, or named customer facts unless explicitly provided
+
+---
+
+# Priority Order
+
+## 1. Case Studies Page
+
+This is the most important credibility gap.
+
+### Route
+`/case-studies`
+
+### Goal
+Create a polished case studies hub that feels real and enterprise-grade, even if some stories remain anonymized for now.
+
+### Recommended Page Structure
+
+1. Hero section
+2. Intro paragraph
+3. Case study grid
+4. Optional industry filter or capability filter
+5. CTA section
+
+### Hero Copy
+
+**Title:**  
+Selected customer outcomes
+
+**Intro:**  
+Marketware helps organizations turn Dynatrace into a stronger operational capability. Explore examples of how observability, digital experience, automation, and platform expertise can improve reliability, visibility, and decision-making.
+
+---
+
+## Case Study Card Structure
+
+Each case study card should support:
+
+- Sector
+- Headline
+- Short summary
+- Service tags
+- Optional impact bullets
+- CTA link: `Read case study`
+
+Create the data model so each card can later link to its own detail page.
+
+Suggested fields:
+
+```ts
+type CaseStudy = {
+  id: string;
+  title: string;
+  sector: string;
+  clientLabel: string;
+  summary: string;
+  challenge: string;
+  approach: string;
+  impact: string[];
+  services: string[];
+  featured?: boolean;
+};
+```
+
+---
+
+## Initial Case Studies to Use
+
+### Case Study 1
+**Title:**  
+Leading Iberian Bank modernizes observability and accelerates digital performance
+
+**Sector:**  
+Banking & Financial Services
+
+**Client label:**  
+Leading Iberian Bank
+
+**Summary:**  
+Marketware supported a large financial organization in strengthening service observability, digital performance visibility, and operational insight across critical environments.
+
+**Challenge:**  
+Fragmented visibility across applications, infrastructure, and digital journeys made it harder to correlate issues, prioritize business impact, and accelerate investigation.
+
+**Approach:**  
+Marketware helped shape a more unified Dynatrace-driven observability approach, improving service visibility, digital performance monitoring, and operational reporting across business-critical systems.
+
+**Impact:**  
+- Clearer end-to-end service understanding
+- Faster performance investigation
+- Better prioritization of issues affecting critical customer journeys
+- Stronger executive and operational reporting
+
+**Services:**  
+- Critical Service Observability
+- Digital Experience Monitoring
+- Operational Reporting
+
+---
+
+### Case Study 2
+**Title:**  
+Energy operator strengthens monitoring of critical digital services
+
+**Sector:**  
+Energy & Utilities
+
+**Client label:**  
+Major Portuguese Energy Operator
+
+**Summary:**  
+Marketware helped improve visibility over critical services and user-facing digital journeys in an environment where reliability and timely detection are essential.
+
+**Challenge:**  
+High operational criticality, distributed service dependencies, and the need to detect service degradation before wider customer or business impact.
+
+**Approach:**  
+Marketware supported the adoption and refinement of Dynatrace for critical service monitoring, synthetic monitoring, dashboards, and operational insight.
+
+**Impact:**  
+- Improved visibility into critical services
+- Better early detection of user-facing degradation
+- More reliable operational monitoring practices
+- Stronger readiness for high-demand scenarios
+
+**Services:**  
+- Synthetic Monitoring
+- Critical Service Observability
+- Dashboards & Reporting
+
+---
+
+### Case Study 3
+**Title:**  
+Insurance organization improves digital experience visibility
+
+**Sector:**  
+Insurance
+
+**Client label:**  
+Large Insurance Organization
+
+**Summary:**  
+Marketware supported stronger visibility into digital journeys and performance signals that affect customer confidence and service quality.
+
+**Challenge:**  
+Limited visibility into real customer experience across digital channels and insufficient context when performance issues affected conversion or service use.
+
+**Approach:**  
+Marketware helped advance Digital Experience Monitoring and Synthetic Monitoring practices through Dynatrace, creating a stronger link between technical signals and customer-facing reliability.
+
+**Impact:**  
+- Better understanding of digital journey health
+- Improved synthetic coverage of critical processes
+- Faster distinction between application, infrastructure, and UX-driven issues
+- Clearer remediation prioritization
+
+**Services:**  
+- Digital Experience Monitoring
+- Synthetic Monitoring
+- Performance Intelligence
+
+---
+
+## Future Improvement Hooks
+
+Make it easy to later add:
+
+- Approved customer logos
+- Named customer references
+- Quantified outcomes
+- Quotes/testimonials
+- Case study detail pages
+- Before/after sections
+- Technologies used
+
+---
+
+# 2. Services Page
+
+## Route
+`/services`
+
+## Goal
+Move beyond a simple service grid. Build a consultative page that explains what Marketware actually delivers.
+
+### Hero Copy
+
+**Title:**  
+Dynatrace services built for enterprise outcomes
+
+**Intro:**  
+Marketware helps organizations design, expand, and operationalize Dynatrace across observability, digital experience, automation, and platform optimization. Our services combine technical depth with practical enterprise delivery.
+
+---
+
+## Recommended Services
+
+Create rich service sections for:
+
+1. Dynatrace Strategy & Adoption
+2. Critical Service Observability
+3. Digital Experience & Synthetic Monitoring
+4. Custom Dynatrace Apps & Integrations
+5. Managed Optimization
+
+Each service should contain:
+
+- Description
+- Typical deliverables
+- Typical outcomes
+- Dynatrace areas/modules covered
+- CTA button or contextual next step
+
+---
+
+## Service Content
+
+### 1. Dynatrace Strategy & Adoption
+
+**Description:**  
+We help organizations define how Dynatrace should support their observability goals, operating model, and business priorities, from first adoption to maturity expansion.
+
+**Typical deliverables:**  
+- Current-state assessment
+- Monitoring roadmap
+- Scope and prioritization model
+- Governance recommendations
+- Platform adoption plan
+
+**Typical outcomes:**  
+- Clear observability direction
+- Better alignment between platform investment and business needs
+- Reduced fragmentation in monitoring practices
+
+**Dynatrace coverage:**  
+- Platform architecture
+- Environment strategy
+- Entity model
+- Dashboards
+- Alerting foundations
+
+---
+
+### 2. Critical Service Observability
+
+**Description:**  
+We design observability around what matters most: critical services, business journeys, dependencies, and operational risk.
+
+**Typical deliverables:**  
+- Critical service inventory
+- Service flow and dependency mapping
+- KPI and SLO-oriented views
+- Executive and operational dashboards
+- Problem triage model
+
+**Typical outcomes:**  
+- Faster understanding of service health
+- Better prioritization of incidents
+- Clearer operational ownership
+
+**Dynatrace coverage:**  
+- Smartscape
+- Services
+- Davis problems
+- DQL
+- Dashboards and Notebooks
+
+---
+
+### 3. Digital Experience & Synthetic Monitoring
+
+**Description:**  
+We help teams understand and protect the user experience through real user monitoring, synthetic testing, and performance visibility.
+
+**Typical deliverables:**  
+- Synthetic monitoring strategy
+- Browser clickpath creation and optimization
+- Digital journey coverage
+- Frontend performance review
+- Executive reporting
+
+**Typical outcomes:**  
+- Earlier detection of digital degradation
+- Better customer journey reliability
+- Stronger visibility into regional and endpoint-specific issues
+
+**Dynatrace coverage:**  
+- Synthetic Monitoring
+- Real User Monitoring
+- Session Replay where applicable
+- Web Vitals and frontend KPIs
+
+---
+
+### 4. Custom Dynatrace Apps & Integrations
+
+**Description:**  
+We create custom experiences, automations, and integrations that extend Dynatrace into the way your organization operates.
+
+**Typical deliverables:**  
+- Dynatrace Apps
+- App Functions
+- Workflow automations
+- ServiceNow integrations
+- External system enrichment
+- Custom operational views
+
+**Typical outcomes:**  
+- Reduced manual effort
+- Better workflow fit
+- Greater business-specific value from Dynatrace
+
+**Dynatrace coverage:**  
+- Dynatrace App Toolkit
+- AppEngine
+- Workflows
+- APIs
+- Grail and DQL
+- Integrations
+
+---
+
+### 5. Managed Optimization
+
+**Description:**  
+We help organizations continuously improve their Dynatrace estate, keeping monitoring meaningful, performant, and aligned with evolving priorities.
+
+**Typical deliverables:**  
+- Monitoring quality reviews
+- Dashboard and alert optimization
+- Usage improvement backlog
+- Platform hygiene recommendations
+- Quarterly observability maturity reviews
+
+**Typical outcomes:**  
+- More sustainable monitoring practices
+- Less noise
+- Better use of the existing Dynatrace investment
+
+---
+
+## Services CTA
+
+**Headline:**  
+Need help turning Dynatrace into a stronger operational capability?
+
+**CTA:**  
+Talk to a Dynatrace specialist
+
+---
+
+# 3. Industries Page
+
+## Route
+`/industries`
+
+## Goal
+Show that Marketware understands sector-specific operational realities.
+
+### Hero Copy
+
+**Title:**  
+Observability for industries where reliability matters
+
+**Intro:**  
+Marketware supports organizations operating in demanding, high-impact environments where digital performance, service continuity, and fast operational decisions are essential.
+
+---
+
+## Industries to Cover
+
+1. Banking & Financial Services
+2. Energy & Utilities
+3. Insurance
+4. Public & Critical Digital Services
+
+Each industry section should include:
+
+- Pain points
+- How Marketware helps
+- Short proof-style credibility statement
+- Optional matching image or visual panel
+
+---
+
+## Industry Content
+
+### Banking & Financial Services
+
+**Pain points:**  
+- Customer-facing digital services must remain fast and reliable
+- Complex hybrid environments and transaction chains
+- Pressure to detect issues before customer impact grows
+- High importance of incident traceability and operational accountability
+
+**How Marketware helps:**  
+- Critical digital journey monitoring
+- End-to-end service observability
+- Synthetic and real user monitoring
+- Incident prioritization and executive reporting
+- Integrations with operational workflows
+
+**Credibility statement:**  
+Experience supporting large Iberian financial organizations with Dynatrace-focused observability initiatives.
+
+---
+
+### Energy & Utilities
+
+**Pain points:**  
+- Mission-critical operations and broad service landscapes
+- Customer portals, operational platforms, and field systems
+- Need for strong resilience and dependable monitoring signals
+- Complex dependencies across infrastructure and applications
+
+**How Marketware helps:**  
+- Critical service maps
+- Synthetic monitoring for key journeys
+- Operational health views
+- Automation and reporting
+- Reliability-focused observability practices
+
+---
+
+### Insurance
+
+**Pain points:**  
+- Digital interactions tied to customer confidence
+- Complex policy, claims, and service journeys
+- Need to understand performance issues across multiple channels
+- Importance of reducing investigation effort
+
+**How Marketware helps:**  
+- Customer journey visibility
+- Experience and application performance monitoring
+- Synthetic test coverage
+- Root cause support
+- Decision-ready dashboards
+
+---
+
+### Public & Critical Digital Services
+
+**Pain points:**  
+- Availability and trust are essential
+- Services may support large populations or critical operations
+- Digital degradation can have wide public impact
+- Need for reliable monitoring and clear escalation signals
+
+**How Marketware helps:**  
+- Service-centric observability
+- Operational dashboards
+- Synthetic checks
+- Platform governance
+- Workflow optimization
+
+---
+
+# 4. About Page
+
+## Route
+`/about`
+
+## Goal
+Give Marketware a stronger identity, story, and point of view.
+
+### Hero Copy
+
+**Title:**  
+A specialist consultancy built around Dynatrace
+
+**Intro:**  
+Marketware helps organizations move from platform deployment to real operational value. We combine deep Dynatrace expertise with a practical understanding of complex enterprise environments.
+
+---
+
+## Recommended Sections
+
+### Who we are
+Marketware is a Portugal-based technology consultancy focused on observability, digital resilience, and operational performance, with Dynatrace at the center of its expertise.
+
+### What makes us different
+
+Create 4 cards or pillars:
+
+#### 1. Specialization over generalism
+We focus deeply on Dynatrace and the operational capabilities around it.
+
+#### 2. Enterprise context
+We understand the demands of regulated and critical environments.
+
+#### 3. From visibility to action
+We prioritize practical outcomes, not dashboards for their own sake.
+
+#### 4. Innovation with purpose
+We build accelerators, apps, integrations, and automation where they create clear value.
+
+---
+
+## Partner Status Section
+
+Use placeholder wording that can be refined later:
+
+Marketware is a Dynatrace Partner, helping customers adopt and expand Dynatrace in ways that improve decision-making, resilience, and operational execution.
+
+---
+
+## International Ambition Section
+
+Trusted in Portugal and Iberia, Marketware is building for a broader international presence, supporting organizations that require specialist observability expertise and a pragmatic delivery partner.
+
+---
+
+## Future Facts to Add Later
+
+Structure the page so these can be added once confirmed:
+
+- Founding year
+- Founders or leadership names
+- Team size or capabilities
+- Certifications
+- Exact Dynatrace partner designation
+- Office/location details
+- Company milestones
+
+---
+
+# 5. Contact Page
+
+## Route
+`/contact`
+
+## Goal
+Turn the contact page into a polished conversion page with clean UX and backend-ready structure.
+
+### Hero Copy
+
+**Title:**  
+Start a conversation
+
+**Intro:**  
+Tell us what you are trying to improve with Dynatrace, observability, digital experience, or automation. We will get back to you with the right next step.
+
+---
+
+## Contact Form Fields
+
+Build a real form layout with:
+
+- Name
+- Work email
+- Company
+- Country, optional
+- Topic dropdown:
+  - Dynatrace services
+  - Custom apps and integrations
+  - Synthetic monitoring
+  - Observability roadmap
+  - Partnership / other
+- Message
+- Consent checkbox
+
+---
+
+## Privacy Wording
+
+By submitting this form, you agree that Marketware may use your information to respond to your inquiry. Your data will be handled in accordance with our Privacy Policy.
+
+---
+
+## Form State Requirements
+
+Implement:
+
+- Idle state
+- Loading state
+- Success state
+- Error state
+- Frontend validation
+
+---
+
+## Submission Architecture
+
+Do not hardcode backend assumptions.  
+Create a small service abstraction such as:
+
+```ts
+submitContactForm(payload)
+```
+
+The actual backend destination can be connected later.
+
+---
+
+## Contact Sidebar
+
+Keep contact content data-driven and easy to replace.
+
+Use placeholders only if real values have not been confirmed:
+
+- Email
+- LinkedIn URL
+- Phone, optional
+- Location
+
+---
+
+# 6. Insights Page
+
+## Route
+`/insights`
+
+## Goal
+Make the Insights page feel intentional and expandable, even before full article content exists.
+
+### Recommended Page Structure
+
+1. Hero
+2. Featured article
+3. Article category filters
+4. Article card grid
+5. Optional newsletter or contact CTA
+
+---
+
+## Hero Copy
+
+**Title:**  
+Insights from the field
+
+**Intro:**  
+Ideas, practices, and lessons from working with Dynatrace, observability, digital performance, and operational automation in complex enterprise environments.
+
+---
+
+## Temporary Article Titles
+
+Create data-driven cards for the following topics:
+
+1. Turning Dynatrace data into operational decisions
+2. Why synthetic monitoring matters for critical digital journeys
+3. From visibility to action: using automation to reduce operational friction
+4. Designing service-centric dashboards for enterprise teams
+5. How custom Dynatrace apps unlock business-specific value
+6. What a mature Dynatrace operating model looks like
+
+Each article card should support:
+
+- Title
+- Category
+- Date placeholder
+- Short excerpt
+- Author placeholder
+- CTA: Read article
+
+Destination pages can remain unimplemented for now, but the architecture should allow future detail routes.
+
+---
+
+# 7. Footer Cleanup and Expansion
+
+## Goal
+Keep the professional footer, but avoid dead navigation unless pages exist.
+
+### Keep Links
+- About
+- Services
+- Industries
+- Case Studies
+- Insights
+- Contact
+
+### Add Only When Pages Exist
+- Accelerators
+- Partners
+- Privacy Policy
+- Terms of Use
+- Cookies
+
+### Hide or Remove For Now
+- Careers, unless Marketware explicitly wants it live
+
+---
+
+## Footer CTA Section
+
+Before the footer links, add a strong CTA block:
+
+**Headline:**  
+Ready to expand the value of your Dynatrace investment?
+
+**Text:**  
+Let’s discuss your observability roadmap and identify where Marketware can accelerate outcomes.
+
+**CTA:**  
+Book a consultation
+
+---
+
+# 8. Confirmed Information Still Needed From Marketware
+
+Do not invent these. Keep data structures ready for them.
+
+1. Publicly approved customer references
+2. Approved case study names and outcomes
+3. Quantified case study results
+4. Any approved customer quotes/testimonials
+5. Official Marketware company story
+6. Exact Dynatrace partner wording
+7. Real contact email
+8. LinkedIn company URL
+9. Phone number, if desired
+10. Legal pages:
+   - Privacy Policy
+   - Terms of Use
+   - Cookies
+11. Whether the site should emphasize:
+   - Portugal and Iberia
+   - Europe
+   - Global international delivery
+
+---
+
+# 9. Implementation Requirements
+
+The Agent should keep the implementation:
+
+- React + Vite + TypeScript
+- Reusable and data-driven
+- Responsive
+- Accessible
+- Cleanly structured
+- Easy to extend later
+
+Avoid:
+
+- Hardcoded repeated card markup
+- Inline styling for static layouts
+- Invented metrics
+- Invented testimonials
+- Unconfirmed customer names in case studies
+- Dead links where pages do not exist
+
+---
+
+# 10. Recommended Components
+
+Create or reuse components such as:
+
+- `PageHero`
+- `SectionTitle`
+- `CTASection`
+- `ServiceDetailBlock`
+- `IndustryDetailSection`
+- `CaseStudyCard`
+- `ArticleCard`
+- `ContactForm`
+- `ContactInfoCard`
+- `FooterCTA`
+
+---
+
+# 11. Final Goal
+
+After this work, the Marketware website should feel like a credible, polished B2B consultancy website with:
+
+- A strong homepage
+- Substantive internal pages
+- Clear Dynatrace specialization
+- Clear sector relevance
+- Strong enterprise tone
+- A maintainable frontend foundation ready for refinement with approved business content
