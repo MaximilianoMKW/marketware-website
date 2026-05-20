@@ -1,28 +1,28 @@
-import { Award, Building2, Crosshair, Rocket } from 'lucide-react';
+import { Award, Building2, Crosshair, ShieldCheck } from 'lucide-react';
 
 export const whyMarketware = [
   {
     category: 'Expertise',
-    title: 'Dynatrace specialization',
-    text: 'Deep technical expertise and certified consultants focused exclusively on Dynatrace.',
+    title: 'Specialist enterprise expertise',
+    text: 'Deep capability across Dynatrace observability, digital resilience, and enterprise digital trust solutions.',
     icon: Award,
   },
   {
     category: 'Trust',
-    title: 'Enterprise-grade references',
-    text: 'Proven results with leading organizations in regulated and mission-critical environments.',
+    title: 'Trusted by demanding organizations',
+    text: 'Experience supporting large, complex, and mission-critical enterprises across financial services, telecom, insurance, and other sectors.',
     icon: Building2,
   },
   {
     category: 'Action',
-    title: 'Observability in action',
-    text: 'We translate data into decisions through actionable insights, automations, and AI-powered analytics.',
+    title: 'From visibility to control',
+    text: 'We help organizations turn monitoring, automation, and trust lifecycle data into clearer operational decisions.',
     icon: Crosshair,
   },
   {
-    category: 'Innovation',
-    title: 'Custom solutions and accelerators',
-    text: 'Proprietary accelerators and integrations that speed time-to-value and drive continuous improvement.',
-    icon: Rocket,
+    category: 'Resilience',
+    title: 'Solutions that reduce risk',
+    text: 'From observability accelerators to certificate lifecycle management, we focus on practical outcomes and measurable resilience.',
+    icon: ShieldCheck,
   },
 ];

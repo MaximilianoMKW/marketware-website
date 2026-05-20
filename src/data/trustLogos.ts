@@ -10,6 +10,7 @@ import luzSaudeLogo from '../assets/logos/trust/luz-saude.svg';
 import santanderLogo from '../assets/logos/trust/santander.svg';
 
 export const trustLogos = [
+  { label: 'NOS', className: 'logo-strip__item--nos', enabled: false },
   { label: 'EDP', src: edpLogo, className: 'logo-strip__item--edp' },
   { label: 'E-REDES', src: eRedesLogo, className: 'logo-strip__item--eredes' },
   { label: 'Santander', src: santanderLogo, className: 'logo-strip__item--santander' },

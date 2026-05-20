@@ -13,7 +13,7 @@ export function Insights() {
     <>
       <PageHero
         title="Insights from the field"
-        text="Ideas, practices, and lessons from working with Dynatrace, observability, digital performance, and operational automation in complex enterprise environments."
+        text="Ideas, practices, and lessons from working with Dynatrace, observability, digital performance, operational automation, and enterprise digital trust in complex environments."
       />
       <section className="section">
         <Container>
@@ -37,7 +37,7 @@ export function Insights() {
       <Container className="section">
         <CTASection
           title="Want to discuss one of these topics in your environment?"
-          text="Marketware can help translate observability practices into practical next steps for your Dynatrace roadmap."
+          text="Marketware can help translate observability and certificate lifecycle practices into practical next steps for your enterprise roadmap."
           ctaLabel="Start a conversation"
         />
       </Container>

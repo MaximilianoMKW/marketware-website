@@ -14,8 +14,11 @@ export function Footer() {
       <Container>
         <section className="site-footer__cta">
           <div>
-            <h2>Ready to expand the value of your Dynatrace investment?</h2>
-            <p>Let's discuss your observability roadmap and identify where Marketware can accelerate outcomes.</p>
+            <h2>Ready to strengthen observability, resilience, and digital trust?</h2>
+            <p>
+              Let's discuss how Marketware can help your organization reduce operational risk and extract more value from
+              the platforms that support critical digital services.
+            </p>
           </div>
           <Button href="/contact">Book a consultation</Button>
         </section>
@@ -25,8 +28,8 @@ export function Footer() {
               <img src={marketwareLogo} alt="Marketware" />
             </div>
             <p>
-              Marketware is a Dynatrace-focused consultancy helping enterprises improve observability, digital resilience,
-              automation, and operational performance.
+              Marketware is a specialist technology partner helping enterprises improve observability, operational
+              resilience, automation, certificate lifecycle governance, and digital trust.
             </p>
           </div>
           {footerColumns.map((column) => (

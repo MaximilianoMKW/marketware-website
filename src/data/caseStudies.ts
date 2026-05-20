@@ -57,4 +57,23 @@ export const caseStudies = [
     ],
     services: ['Digital Experience Monitoring', 'Synthetic Monitoring', 'Performance Intelligence'],
   },
+  {
+    id: 'enterprise-certificate-lifecycle-visibility',
+    sector: 'Enterprise Infrastructure',
+    clientLabel: 'Anonymized enterprise scenario',
+    title: 'Large enterprise improves certificate lifecycle visibility and reduces operational risk',
+    summary:
+      'Marketware helps organizations prepare for stronger certificate lifecycle visibility, governance, and renewal risk reduction across complex digital estates.',
+    challenge:
+      'A complex certificate estate can create lifecycle management challenges, expiry risk, unclear ownership, and limited operational visibility across critical services.',
+    approach:
+      'Marketware supports enterprise digital trust practices, including DigiCert Trust Lifecycle Manager adoption, certificate lifecycle visibility, and governance improvements.',
+    impact: [
+      'Better visibility across certificate assets',
+      'Clearer ownership and governance',
+      'Reduced expiry-related operational risk',
+      'Stronger foundation for automation',
+    ],
+    services: ['Digital Trust', 'DigiCert Trust Lifecycle Manager', 'Certificate Governance'],
+  },
 ];

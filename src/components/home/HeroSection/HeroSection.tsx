@@ -14,8 +14,9 @@ export function HeroSection() {
             Dynatrace expertise for organizations that cannot afford <span className="hero-section__highlight">blind spots</span>
           </h1>
           <p className="hero-section__lead">
-            Marketware helps enterprises turn Dynatrace into measurable operational advantage through observability,
-            automation, digital resilience, and performance intelligence.
+            Marketware helps enterprises turn Dynatrace, automation, and digital trust into measurable operational
+            advantage through observability, certificate lifecycle solutions, digital resilience, and performance
+            intelligence.
           </p>
           <div className="hero-section__actions">
             <Button href="/contact">

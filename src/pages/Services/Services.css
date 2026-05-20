@@ -4,6 +4,10 @@
   counter-reset: service;
 }
 
+.service-group:nth-of-type(odd) {
+  background: var(--theme-why);
+}
+
 .service-detail {
   position: relative;
   isolation: isolate;

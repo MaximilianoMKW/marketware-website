@@ -12,7 +12,7 @@ export function CaseStudies() {
     <>
       <PageHero
         title="Selected customer outcomes"
-        text="Marketware helps organizations turn Dynatrace into a stronger operational capability. Explore examples of how observability, digital experience, automation, and platform expertise can improve reliability, visibility, and decision-making."
+        text="Marketware helps organizations strengthen observability, digital experience, automation, and digital trust. Explore examples of how operational intelligence and certificate lifecycle practices can improve reliability, visibility, and decision-making."
       />
       <section className="section section--soft">
         <Container>
@@ -34,8 +34,8 @@ export function CaseStudies() {
       </section>
       <Container className="section">
         <CTASection
-          title="Ready to build your next Dynatrace success story?"
-          text="Let’s identify where observability, digital experience, automation, or platform optimization can create the next practical improvement."
+          title="Ready to build your next observability or digital trust success story?"
+          text="Let's identify where observability, digital experience, automation, certificate lifecycle management, or platform optimization can create the next practical improvement."
           ctaLabel="Discuss your roadmap"
         />
       </Container>

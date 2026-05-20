@@ -108,6 +108,11 @@
   min-width: 120px;
 }
 
+.logo-strip__item--nos {
+  color: #111827;
+  min-width: 112px;
+}
+
 .logo-strip__item--ctt img {
   max-width: 112px;
   max-height: 26px;
@@ -315,6 +320,7 @@
   .logo-strip__item--cgd,
   .logo-strip__item--fidelidade,
   .logo-strip__item--ctt,
+  .logo-strip__item--nos,
   .logo-strip__item--luz,
   .logo-strip__item--ana,
   .logo-strip__item--brisa,

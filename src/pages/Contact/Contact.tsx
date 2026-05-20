@@ -11,6 +11,8 @@ const topics = [
   'Custom apps and integrations',
   'Synthetic monitoring',
   'Observability roadmap',
+  'Digital trust and certificates',
+  'DigiCert Trust Lifecycle Manager',
   'Partnership / other',
 ];
 
@@ -54,7 +56,7 @@ export function Contact() {
     <>
       <PageHero
         title="Start a conversation"
-        text="Tell us what you are trying to improve with Dynatrace, observability, digital experience, or automation. We will get back to you with the right next step."
+        text="Tell us what you are trying to improve with Dynatrace, observability, digital experience, automation, digital trust, or certificate lifecycle management. We will get back to you with the right next step."
       />
       <section className="section section--soft">
         <Container>
@@ -108,7 +110,10 @@ export function Contact() {
             </form>
             <aside className="contact-card" aria-label="Contact details">
               <h2>Marketware Lda</h2>
-              <p>Dynatrace-focused consultancy for observability, digital resilience, automation, and operational performance.</p>
+              <p>
+                Specialist technology partner for observability, digital resilience, automation, certificate lifecycle
+                governance, and enterprise digital trust.
+              </p>
               <a href="mailto:hello@marketware.eu">
                 <Mail aria-hidden="true" size={18} />
                 hello@marketware.eu

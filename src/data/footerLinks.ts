@@ -12,6 +12,7 @@ export const footerColumns = [
       { label: 'Services', href: '/services' },
       { label: 'Industries', href: '/industries' },
       { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Digital Trust', href: '/services#digital-trust' },
     ],
   },
   {
@@ -20,7 +21,7 @@ export const footerColumns = [
       { label: 'Insights', href: '/insights' },
       { label: 'Dynatrace Strategy', href: '/services' },
       { label: 'Synthetic Monitoring', href: '/services' },
-      { label: 'Custom Apps & Integrations', href: '/services' },
+      { label: 'Certificate Lifecycle Management', href: '/services#digital-trust' },
     ],
   },
 ];

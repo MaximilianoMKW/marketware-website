@@ -10,8 +10,8 @@ export function Industries() {
   return (
     <>
       <PageHero
-        title="Observability for industries where reliability matters"
-        text="Marketware supports organizations operating in demanding, high-impact environments where digital performance, service continuity, and fast operational decisions are essential."
+        title="Enterprise support for industries where reliability and trust matter"
+        text="Marketware supports organizations operating in demanding, high-impact environments where digital performance, service continuity, certificate governance, and trusted operations are essential."
       />
       <section className="section">
         <Container>
@@ -71,8 +71,8 @@ export function Industries() {
       </section>
       <Container className="section">
         <CTASection
-          title="Bring observability closer to your industry priorities"
-          text="From digital banking to critical services, we shape Dynatrace implementations around the realities of your operating model."
+          title="Bring observability and digital trust closer to your industry priorities"
+          text="From digital banking to critical services, we shape Dynatrace and certificate lifecycle practices around the realities of your operating model."
         />
       </Container>
     </>

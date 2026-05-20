@@ -1,4 +1,4 @@
-import { Building2, CalendarCheck, GaugeCircle, Globe2, Rocket, ShieldCheck } from 'lucide-react';
+import { BadgeCheck, Building2, CalendarCheck, GaugeCircle, Globe2, Rocket, ShieldCheck } from 'lucide-react';
 import { Container } from '../../components/ui/Container/Container';
 import { FeatureCard } from '../../components/ui/Card/FeatureCard';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
@@ -32,8 +32,8 @@ export function About() {
   return (
     <>
       <PageHero
-        title="A specialist consultancy built around Dynatrace"
-        text="Marketware helps organizations move from platform deployment to real operational value. Since 2001, we have combined technical expertise with a practical understanding of complex enterprise environments."
+        title="A specialist consultancy for observability and digital trust"
+        text="Marketware is a specialist technology consultancy helping enterprises strengthen observability, operational resilience, and digital trust. Since 2001, we have supported organizations operating in complex, high-impact digital environments."
       />
       <section className="section">
         <Container>
@@ -41,12 +41,12 @@ export function About() {
             <SectionTitle
               align="left"
               title="Who we are"
-              text="Marketware is a Portugal-based technology consultancy with experience since 2001, focused on observability, digital resilience, and operational performance, with Dynatrace at the center of its expertise."
+              text="Marketware combines deep expertise in Dynatrace with enterprise certificate solutions from DigiCert and Sectigo, helping teams improve visibility, resilience, governance, and trusted digital operations."
             />
             <p>
               We work with enterprise teams that need more than platform deployment. Our experience across long-running
-              technology programs connects observability data to service health, automation, customer experience, and
-              executive decision support.
+              technology programs connects observability data, certificate lifecycle risk, automation, customer experience,
+              and executive decision support.
             </p>
           </div>
           <div className="grid grid--4">
@@ -55,6 +55,30 @@ export function About() {
             ))}
           </div>
           <div className="about-panels">
+            <article className="about-panel">
+              <GaugeCircle aria-hidden="true" size={30} />
+              <div>
+                <h2>Observability</h2>
+                <p>Helping organizations use Dynatrace to understand, improve, and automate critical operations.</p>
+              </div>
+            </article>
+            <article className="about-panel">
+              <BadgeCheck aria-hidden="true" size={30} />
+              <div>
+                <h2>Digital Trust</h2>
+                <p>
+                  Helping enterprises manage certificates, lifecycle risk, and trust infrastructure with DigiCert, Sectigo,
+                  and DigiCert Trust Lifecycle Manager.
+                </p>
+              </div>
+            </article>
+            <article className="about-panel">
+              <Building2 aria-hidden="true" size={30} />
+              <div>
+                <h2>Enterprise Delivery</h2>
+                <p>Supporting organizations where scale, accountability, continuity, and trusted execution matter.</p>
+              </div>
+            </article>
             <article className="about-panel">
               <ShieldCheck aria-hidden="true" size={30} />
               <div>

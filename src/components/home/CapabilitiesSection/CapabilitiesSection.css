@@ -1,0 +1,114 @@
+.capabilities-section {
+  background: var(--theme-why);
+}
+
+.capabilities-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.capability-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: var(--theme-card);
+  box-shadow: var(--shadow-card);
+  padding: clamp(28px, 3vw, 42px);
+}
+
+.capability-card::after {
+  position: absolute;
+  right: -42px;
+  bottom: -54px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(65, 187, 202, 0.18);
+  border-radius: 36px;
+  content: '';
+  transform: rotate(16deg);
+}
+
+.capability-card__icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: rgba(65, 187, 202, 0.12);
+  color: var(--color-teal);
+  place-items: center;
+}
+
+.capability-card h3,
+.capability-card p,
+.capability-card ul,
+.capability-card .button {
+  position: relative;
+  z-index: 1;
+}
+
+.capability-card h3 {
+  max-width: 680px;
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: clamp(1.55rem, 2vw, 2.25rem);
+  line-height: 1.08;
+}
+
+.capability-card p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.capability-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 6px 0 4px;
+  padding: 0;
+  color: var(--color-muted);
+  list-style: none;
+}
+
+.capability-card li {
+  display: flex;
+  gap: 10px;
+}
+
+.capability-card li::before {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.58em;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--color-green), var(--color-teal));
+  content: '';
+}
+
+.capability-card .button {
+  justify-self: start;
+  margin-top: 8px;
+}
+
+@media (min-width: 1500px) {
+  .capabilities-section__grid {
+    gap: 34px;
+  }
+
+  .capability-card p,
+  .capability-card li {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .capabilities-section__grid {
+    grid-template-columns: 1fr;
+  }
+}

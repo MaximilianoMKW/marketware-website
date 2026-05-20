@@ -33,6 +33,14 @@ export const insights = [
     text: 'How to organize operational views around critical services, dependencies, owners, and business relevance.',
   },
   {
+    id: 'certificate-lifecycle-risk',
+    category: 'Digital Trust',
+    date: 'Coming soon',
+    author: 'Marketware team',
+    title: 'Why certificate lifecycle visibility belongs in resilience planning',
+    text: 'How certificate governance, renewal ownership, and lifecycle visibility reduce avoidable risk in critical digital services.',
+  },
+  {
     id: 'custom-dynatrace-apps',
     category: 'Custom Apps',
     date: 'Coming soon',
