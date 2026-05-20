@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './ArticleCard.css';
 
 type ArticleCardProps = {
@@ -21,9 +22,9 @@ export function ArticleCard({ id, category, date, author, title, text, featured 
       <h3>{title}</h3>
       <p>{text}</p>
       {author ? <span className="article-card__author">{author}</span> : null}
-      <a href={id ? `/insights#${id}` : '/insights'} aria-label={`Read ${title}`}>
+      <Link to={id ? `/insights#${id}` : '/insights'} aria-label={`Read ${title}`}>
         Read article <ArrowRight aria-hidden="true" size={17} />
-      </a>
+      </Link>
     </article>
   );
 }

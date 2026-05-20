@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './CaseStudyCard.css';
 
 type CaseStudyCardProps = {
@@ -35,9 +36,9 @@ export function CaseStudyCard({ id, sector, clientLabel, title, summary, impact 
           ))}
         </ul>
       ) : null}
-      <a href={id ? `/case-studies#${id}` : '/case-studies'} aria-label={`Read case study about ${title}`}>
+      <Link to={id ? `/case-studies#${id}` : '/case-studies'} aria-label={`Read case study about ${title}`}>
         Read case study <ArrowRight aria-hidden="true" size={17} />
-      </a>
+      </Link>
     </article>
   );
 }

@@ -1,4 +1,5 @@
 import { Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import marketwareLogo from '../../../assets/logos/marketware-logo.png';
 import { footerColumns } from '../../../data/footerLinks';
 import { Button } from '../../ui/Button/Button';
@@ -32,9 +33,9 @@ export function Footer() {
             <div className="site-footer__column" key={column.title}>
               <h3>{column.title}</h3>
               {column.links.map((link) => (
-                <a href={link.href} key={link.label}>
+                <Link to={link.href} key={link.label}>
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           ))}
@@ -51,8 +52,8 @@ export function Footer() {
         <div className="site-footer__bottom">
           <p>© {year} Marketware Lda. All rights reserved.</p>
           <div>
-            <a href="/contact">Privacy inquiries</a>
-            <a href="/contact">Legal inquiries</a>
+            <Link to="/contact">Privacy inquiries</Link>
+            <Link to="/contact">Legal inquiries</Link>
           </div>
         </div>
       </Container>
