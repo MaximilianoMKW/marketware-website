@@ -8,12 +8,16 @@
   border-radius: 6px;
   font-size: 0.82rem;
   font-weight: 800;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
   white-space: nowrap;
 }
 
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .button:disabled {
@@ -25,18 +29,29 @@
 .button--primary {
   background: linear-gradient(135deg, var(--color-green), var(--color-teal));
   color: var(--color-navy-950);
+  box-shadow: 0 16px 32px rgba(65, 187, 202, 0.2);
 }
 
 .button--secondary {
-  border-color: rgba(255, 255, 255, 0.9);
-  background: rgba(5, 16, 31, 0.32);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--color-white);
+  backdrop-filter: blur(12px);
+}
+
+.button--primary:hover {
+  box-shadow: 0 20px 42px rgba(65, 187, 202, 0.28);
+}
+
+.button--secondary:hover {
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .button--ghost {
   border-color: var(--color-border);
-  background: var(--color-white);
-  color: var(--color-navy-900);
+  background: var(--theme-card);
+  color: var(--color-ink-soft);
 }
 
 @media (min-width: 1500px) {

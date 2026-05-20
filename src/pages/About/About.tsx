@@ -1,4 +1,4 @@
-import { Building2, GaugeCircle, Globe2, Rocket, ShieldCheck } from 'lucide-react';
+import { Building2, CalendarCheck, GaugeCircle, Globe2, Rocket, ShieldCheck } from 'lucide-react';
 import { Container } from '../../components/ui/Container/Container';
 import { FeatureCard } from '../../components/ui/Card/FeatureCard';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
@@ -33,7 +33,7 @@ export function About() {
     <>
       <PageHero
         title="A specialist consultancy built around Dynatrace"
-        text="Marketware helps organizations move from platform deployment to real operational value. We combine deep Dynatrace expertise with a practical understanding of complex enterprise environments."
+        text="Marketware helps organizations move from platform deployment to real operational value. Since 2001, we have combined technical expertise with a practical understanding of complex enterprise environments."
       />
       <section className="section">
         <Container>
@@ -41,11 +41,12 @@ export function About() {
             <SectionTitle
               align="left"
               title="Who we are"
-              text="Marketware is a Portugal-based technology consultancy focused on observability, digital resilience, and operational performance, with Dynatrace at the center of its expertise."
+              text="Marketware is a Portugal-based technology consultancy with experience since 2001, focused on observability, digital resilience, and operational performance, with Dynatrace at the center of its expertise."
             />
             <p>
-              We work with enterprise teams that need more than platform deployment. Our approach connects observability
-              data to service health, automation, customer experience, and executive decision support.
+              We work with enterprise teams that need more than platform deployment. Our experience across long-running
+              technology programs connects observability data to service health, automation, customer experience, and
+              executive decision support.
             </p>
           </div>
           <div className="grid grid--4">
@@ -61,6 +62,16 @@ export function About() {
                 <p>
                   Marketware is a Dynatrace Partner, helping customers adopt and expand Dynatrace in ways that improve
                   decision-making, resilience, and operational execution.
+                </p>
+              </div>
+            </article>
+            <article className="about-panel">
+              <CalendarCheck aria-hidden="true" size={30} />
+              <div>
+                <h2>Experience since 2001</h2>
+                <p>
+                  More than two decades of technology delivery shape how we advise, implement, and support observability
+                  capabilities for demanding organizations.
                 </p>
               </div>
             </article>

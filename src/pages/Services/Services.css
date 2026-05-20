@@ -6,30 +6,31 @@
 
 .service-detail {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 28px;
   align-items: start;
   counter-increment: service;
-  border: 1px solid rgba(219, 227, 237, 0.95);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 252, 255, 0.94)),
-    var(--color-white);
+  background: var(--theme-card);
   padding: 30px;
   box-shadow: var(--shadow-soft);
 }
 
 .service-detail::before {
   position: absolute;
-  top: 24px;
-  right: 28px;
+  z-index: 0;
+  top: 20px;
+  right: 26px;
   content: '0' counter(service);
-  color: rgba(65, 187, 202, 0.16);
-  font-size: 4.8rem;
+  color: rgba(65, 187, 202, 0.22);
+  font-size: clamp(4.2rem, 6vw, 6.4rem);
   font-weight: 800;
   line-height: 1;
+  pointer-events: none;
 }
 
 .service-detail:nth-child(even) {
@@ -39,6 +40,10 @@
   color: var(--color-white);
 }
 
+.service-detail:nth-child(even)::before {
+  color: rgba(255, 255, 255, 0.12);
+}
+
 .service-detail:nth-child(even) p,
 .service-detail:nth-child(even) .service-detail__lists ul {
   color: rgba(255, 255, 255, 0.74);
@@ -46,11 +51,12 @@
 
 .service-detail:nth-child(even) .service-detail__lists > div {
   border-color: rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(10, 29, 46, 0.98);
 }
 
 .service-detail__intro {
   position: relative;
+  z-index: 1;
   display: grid;
   gap: 14px;
 }
@@ -77,9 +83,14 @@
 
 .service-detail__lists {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+[data-theme='dark'] .service-detail:not(:nth-child(even))::before {
+  color: rgba(99, 214, 227, 0.12);
 }
 
 .service-detail__lists h3 {
@@ -88,9 +99,9 @@
 }
 
 .service-detail__lists > div {
-  border: 1px solid rgba(219, 227, 237, 0.9);
+  border: 1px solid var(--color-border);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.68);
+  background: var(--theme-card-soft);
   padding: 18px;
 }
 
@@ -125,5 +136,11 @@
   .service-detail,
   .service-detail__lists {
     grid-template-columns: 1fr;
+  }
+
+  .service-detail::before {
+    top: 18px;
+    right: 20px;
+    font-size: clamp(3.1rem, 10vw, 4.4rem);
   }
 }

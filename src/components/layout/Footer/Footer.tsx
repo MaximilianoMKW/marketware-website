@@ -1,4 +1,5 @@
 import { Linkedin } from 'lucide-react';
+import marketwareLogo from '../../../assets/logos/marketware-logo.png';
 import { footerColumns } from '../../../data/footerLinks';
 import { Button } from '../../ui/Button/Button';
 import { Container } from '../../ui/Container/Container';
@@ -20,8 +21,7 @@ export function Footer() {
         <div className="site-footer__grid">
           <div className="site-footer__brand">
             <div className="site-footer__logo">
-              <span>M</span>
-              Marketware
+              <img src={marketwareLogo} alt="Marketware" />
             </div>
             <p>
               Marketware is a Dynatrace-focused consultancy helping enterprises improve observability, digital resilience,

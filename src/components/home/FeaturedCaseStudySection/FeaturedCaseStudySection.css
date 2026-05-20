@@ -5,10 +5,13 @@
   gap: 34px;
   overflow: hidden;
   border-radius: 10px;
-  background: #091426;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 78% 20%, rgba(65, 187, 202, 0.08), transparent 24rem),
+    linear-gradient(135deg, #071827, #06111f);
   color: var(--color-white);
   padding: 22px 14px 12px 132px;
-  box-shadow: none;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
 }
 
 .featured-story__eyebrow {

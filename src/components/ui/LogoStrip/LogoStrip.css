@@ -23,17 +23,17 @@
 .logo-strip__item {
   display: grid;
   flex: 0 0 auto;
-  min-width: 108px;
-  min-height: 44px;
+  min-width: 132px;
+  min-height: 54px;
   place-items: center;
-  border: 2px solid #b7bdc5;
-  border-radius: 5px;
+  border: 1px solid rgba(219, 227, 237, 0.9);
+  border-radius: 10px;
   background: var(--color-white);
   color: #24364a;
-  box-shadow: none;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
   font-weight: 800;
   text-align: center;
-  padding: 6px 12px;
+  padding: 8px 18px;
   font-size: 1.3rem;
   line-height: 1;
   overflow: hidden;
@@ -45,10 +45,15 @@
     transform 180ms ease;
 }
 
+[data-theme='dark'] .logo-strip__item {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: #f7f5f1;
+}
+
 .logo-strip__item:hover,
 .logo-strip__item:focus-within {
   border-color: rgba(65, 187, 202, 0.52);
-  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
   filter: grayscale(0);
   transform: translateY(-1px);
 }
@@ -56,8 +61,8 @@
 .logo-strip__item img {
   display: block;
   width: auto;
-  max-width: 138px;
-  max-height: 30px;
+  max-width: 148px;
+  max-height: 34px;
   object-fit: contain;
 }
 
@@ -229,6 +234,58 @@
   .logo-strip__item--ip img {
     max-width: 198px;
     max-height: 46px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .logo-strip__track {
+    animation-duration: 20s;
+  }
+
+  .logo-strip__group {
+    gap: 22px;
+    padding-right: 22px;
+  }
+
+  .logo-strip__item {
+    min-width: 164px;
+    min-height: 66px;
+    padding: 10px 22px;
+  }
+
+  .logo-strip__item img {
+    max-width: 206px;
+    max-height: 46px;
+  }
+
+  .logo-strip__item--santander {
+    min-width: 214px;
+  }
+
+  .logo-strip__item--fidelidade {
+    min-width: 226px;
+  }
+
+  .logo-strip__item--luz {
+    min-width: 216px;
+  }
+
+  .logo-strip__item--ana {
+    min-width: 216px;
+    max-width: 216px;
+  }
+
+  .logo-strip__item--ana img {
+    width: 182px;
+    max-width: 182px;
+  }
+
+  .logo-strip__item--ip {
+    min-width: 250px;
+  }
+
+  .logo-strip__item--ip img {
+    max-width: 220px;
   }
 }
 

@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import dynatraceLogo from '../../../assets/logos/dynatrace-white.png';
-import heroPanel from '../../../assets/images/smartscape.png';
 import { Button } from '../../ui/Button/Button';
 import { Container } from '../../ui/Container/Container';
 import './HeroSection.css';
@@ -10,7 +9,10 @@ export function HeroSection() {
     <section className="hero-section">
       <Container className="hero-section__inner">
         <div className="hero-section__content">
-          <h1>Dynatrace expertise for organizations that cannot afford blind spots</h1>
+          <p className="hero-section__eyebrow">Dynatrace specialist consultancy</p>
+          <h1>
+            Dynatrace expertise for organizations that cannot afford <span className="hero-section__highlight">blind spots</span>
+          </h1>
           <p className="hero-section__lead">
             Marketware helps enterprises turn Dynatrace into measurable operational advantage through observability,
             automation, digital resilience, and performance intelligence.
@@ -28,9 +30,6 @@ export function HeroSection() {
             <span aria-hidden="true" />
             <strong>We are a Certified Partner</strong>
           </div>
-        </div>
-        <div className="hero-section__visual">
-          <img src={heroPanel} alt="Topology-style Dynatrace observability dashboard" />
         </div>
       </Container>
     </section>

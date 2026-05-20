@@ -13,7 +13,7 @@
 .insights-filter span {
   border: 1px solid var(--color-border);
   border-radius: 999px;
-  background: var(--color-white);
+  background: var(--theme-card);
   color: var(--color-muted);
   padding: 8px 12px;
   font-size: 0.86rem;

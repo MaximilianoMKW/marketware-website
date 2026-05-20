@@ -6,15 +6,17 @@
   height: 100%;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(247, 252, 255, 0.92)),
-    var(--color-white);
+  background: var(--theme-card);
   padding: 28px;
   box-shadow: var(--shadow-soft);
   transition:
     transform 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease;
+}
+
+[data-theme='dark'] .case-card {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .case-card::after {
@@ -50,7 +52,7 @@
   display: inline-flex;
   border-radius: 999px;
   background: rgba(65, 187, 202, 0.13);
-  color: var(--color-navy-900);
+  color: var(--color-ink-soft);
   padding: 7px 12px;
   font-size: 0.78rem;
   font-weight: 800;
@@ -79,8 +81,8 @@
 
 .case-card__tags span {
   border-radius: 999px;
-  background: rgba(6, 20, 38, 0.06);
-  color: #26364c;
+  background: var(--theme-card-soft);
+  color: var(--color-ink-soft);
   padding: 6px 9px;
   font-size: 0.72rem;
   font-weight: 800;
@@ -100,7 +102,7 @@
   align-items: center;
   gap: 8px;
   margin-top: auto;
-  color: var(--color-navy-900);
+  color: var(--color-ink-soft);
   font-weight: 800;
 }
 

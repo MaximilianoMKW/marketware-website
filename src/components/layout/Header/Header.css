@@ -1,4 +1,5 @@
 .site-header {
+  --site-header-height: 72px;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -7,9 +8,10 @@
 }
 
 .site-header--home {
-  margin-bottom: -72px;
+  margin-bottom: calc(var(--site-header-height) * -1);
   background: transparent;
   border-bottom: 1px solid transparent;
+  color: var(--color-white);
 }
 
 .site-header--solid {
@@ -24,9 +26,16 @@
   backdrop-filter: blur(18px);
 }
 
+.site-header--home.site-header--scrolled {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  background: rgba(6, 19, 33, 0.88);
+  color: var(--color-white);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
 .site-header__inner {
   display: flex;
-  min-height: 72px;
+  min-height: var(--site-header-height);
   align-items: center;
   justify-content: space-between;
   gap: 24px;
@@ -54,8 +63,22 @@
   font-weight: 800;
 }
 
+.site-header--home .site-header__nav {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.site-header--home .site-header__nav a:hover,
+.site-header--home .site-header__nav a.is-active {
+  color: var(--color-white);
+}
+
 .site-header__nav a:hover,
 .site-header__nav a.is-active {
+  color: var(--color-white);
+}
+
+.site-header--home .site-header__nav a:hover,
+.site-header--home .site-header__nav a.is-active {
   color: var(--color-white);
 }
 
@@ -95,7 +118,8 @@
   display: none;
 }
 
-.site-header__menu {
+.site-header__menu,
+.site-header__theme {
   width: 44px;
   height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -104,9 +128,25 @@
   color: var(--color-white);
 }
 
+.site-header__theme {
+  display: grid;
+  place-items: center;
+}
+
+.site-header--home .site-header__menu,
+.site-header--home .site-header__theme {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
 @media (min-width: 1500px) {
+  .site-header {
+    --site-header-height: 82px;
+  }
+
   .site-header__inner {
-    min-height: 82px;
+    min-height: var(--site-header-height);
   }
 
   .site-header__brand img {
@@ -140,6 +180,11 @@
     background: var(--color-navy-900);
     box-shadow: var(--shadow-card);
     padding: 22px;
+  }
+
+  .site-header--home .site-header__nav {
+    background: rgba(6, 19, 33, 0.98);
+    color: rgba(255, 255, 255, 0.78);
   }
 
   .site-header__nav--open {

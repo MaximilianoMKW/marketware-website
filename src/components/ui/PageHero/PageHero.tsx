@@ -17,11 +17,6 @@ export function PageHero({ eyebrow, title, text }: PageHeroProps) {
             <h1>{title}</h1>
             {text ? <p>{text}</p> : null}
           </div>
-          <div className="page-hero__signal" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
         </div>
       </Container>
     </section>

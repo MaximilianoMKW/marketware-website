@@ -7,10 +7,10 @@ export function IndustriesSection() {
   return (
     <section className="section section--soft industries-section">
       <Container>
-        <SectionTitle title="Industries we understand" />
+        <SectionTitle eyebrow="Industry experience" title="Industries we understand" />
         <div className="grid grid--4">
-          {industries.map((industry) => (
-            <IndustryCard key={industry.title} title={industry.title} image={industry.image} icon={industry.icon} />
+          {industries.map((industry, index) => (
+            <IndustryCard key={industry.title} index={index} title={industry.title} image={industry.image} icon={industry.icon} />
           ))}
         </div>
       </Container>

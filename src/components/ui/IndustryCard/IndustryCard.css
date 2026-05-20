@@ -1,16 +1,16 @@
 .industry-card {
   position: relative;
-  min-height: 186px;
+  min-height: 238px;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: none;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(6, 20, 38, 0.14);
   transition: box-shadow 220ms ease, transform 220ms ease;
 }
 
 .industry-card img {
   width: 100%;
   height: 100%;
-  min-height: 186px;
+  min-height: 238px;
   object-fit: cover;
   transition: transform 420ms ease;
 }
@@ -19,28 +19,37 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(6, 20, 38, 0.12), rgba(6, 20, 38, 0.78)),
-    linear-gradient(90deg, rgba(6, 20, 38, 0.76), rgba(6, 20, 38, 0.24));
+    linear-gradient(180deg, rgba(6, 20, 38, 0.08), rgba(6, 20, 38, 0.82)),
+    linear-gradient(90deg, rgba(6, 20, 38, 0.76), rgba(6, 20, 38, 0.12));
   transition: opacity 220ms ease;
 }
 
 .industry-card__content {
   position: absolute;
-  inset: auto 20px 18px 20px;
+  inset: auto 24px 24px 24px;
   color: var(--color-white);
 }
 
+.industry-card__index {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
 .industry-card__content svg {
-  margin-bottom: 10px;
-  width: 48px;
-  height: 48px;
+  margin-bottom: 12px;
+  width: 44px;
+  height: 44px;
   stroke-width: 2.2;
 }
 
 .industry-card h3 {
   max-width: 280px;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.22rem;
   line-height: 1.18;
 }
 
@@ -51,12 +60,12 @@
 }
 
 .industry-card:hover {
-  box-shadow: 0 22px 44px rgba(6, 20, 38, 0.22);
-  transform: translateY(-6px);
+  box-shadow: 0 28px 58px rgba(6, 20, 38, 0.22);
+  transform: translateY(-5px);
 }
 
 .industry-card:hover img {
-  transform: scale(1.06);
+  transform: scale(1.035);
 }
 
 .industry-card:hover .industry-card__overlay {
@@ -78,11 +87,11 @@
 
 @media (min-width: 1500px) {
   .industry-card {
-    min-height: 230px;
+    min-height: 286px;
   }
 
   .industry-card img {
-    min-height: 230px;
+    min-height: 286px;
   }
 
   .industry-card__content {
@@ -96,10 +105,24 @@
 
   .industry-card h3 {
     max-width: 340px;
-    font-size: 1.3rem;
+    font-size: 1.42rem;
   }
 
   .industry-card p {
     font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .industry-card {
+    min-height: 330px;
+  }
+
+  .industry-card img {
+    min-height: 330px;
+  }
+
+  .industry-card__content {
+    inset: auto 34px 32px 34px;
   }
 }

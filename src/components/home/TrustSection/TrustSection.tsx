@@ -7,7 +7,7 @@ export function TrustSection() {
   return (
     <section className="section section--soft trust-section">
       <Container>
-        <SectionTitle title="Trusted in demanding environments" />
+        <SectionTitle eyebrow="Enterprise trust" title="Trusted in demanding environments" />
         <LogoStrip logos={trustLogos} />
       </Container>
     </section>

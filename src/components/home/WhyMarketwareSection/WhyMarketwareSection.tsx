@@ -7,7 +7,7 @@ export function WhyMarketwareSection() {
   return (
     <section className="section why-section">
       <Container>
-        <SectionTitle title="Why organizations choose Marketware" />
+        <SectionTitle eyebrow="Why Marketware" title="Why organizations choose Marketware" />
         <div className="grid grid--4">
           {whyMarketware.map((item) => (
             <FeatureCard key={item.title} {...item} />
